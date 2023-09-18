@@ -69,15 +69,7 @@ public class borrowBook extends Person {
         System.out.println("Bạn đọc " + reader.getId() + " đã mượn sách " + book.getNameBook());
     }
 
-    public void giveBookBack(Book book) {
-        if (listBorrowBook.contains(book)) {
-            book.setStatus("Có sẵn");
-            listBorrowBook.remove(book);
-            System.out.println("Bạn đọc " + reader.getId() + " đã trả sách " + book.getNameBook());
-        } else {
-            System.out.println("Sách " + book.getNameBook() + " không tồn tại trong danh sách mượn của bạn đọc.");
-        }
-    }
+
     public void printListBorrowBook() {
         System.out.println("Danh sách sách đang mượn:");
         for (Book sach : listBorrowBook) {
